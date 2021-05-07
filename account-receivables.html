@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8">
+    <title> </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="styles/images/web-icon.ico">
+    <link rel="stylesheet" type="text/css" href="styles/fonts/css/fontello.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700|Noto+Sans+TC:300,400,500,700,900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/plugins/bootstrap-reboot.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/plugins/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/plugins/slick.css">
+    <link rel="stylesheet" type="text/css" href="styles/plugins/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="styles/common.css">
+    <link rel="stylesheet" type="text/css" href="styles/page.css">
+  </head>
+  <body>
+    <header id="header">
+      <div class="container-fluid px-lg-5">
+        <div class="row">
+          <div class="col-6 col-lg-2 text-left d-lg-flex align-items-center order-1 order-lg-1"><a class="logo" href="index.html">
+              <h1 class="logo-pic"><img src="images/logo.svg" alt=""></h1></a></div>
+          <div class="col-12 col-lg-8 d-flex justify-content-lg-center align-items-center order-3 order-lg-2">
+            <div class="menu">
+              <ui class="list-inline">
+                <li class="list-inline-item">
+                  <div class="menu-hover">
+                    <div class="menu-toggle inner-menu-toggle">CM2 Bots</div>
+                    <div class="menu-sub-menu"><a href="agreement-bot.html" title="Agreement Bot">Agreement Bot</a><a href="rent-roll-bot.html" title="Rent Roll Bot">Rent Roll Bot</a><a href="bank-bot.html" title="Bank Bot">Bank Bot</a><a href="collection-bot.html" title="Collection Bot">Collection Bot</a><a href="admin-bot.html" title="Admin Bot">Admin Bot</a></div>
+                  </div>
+                </li>
+                <li class="list-inline-item">
+                  <div class="menu-hover">
+                    <div class="menu-toggle inner-menu-toggle">Income Management</div>
+                    <div class="menu-sub-menu"><a href="rent-roll.html" title="Universal Rent Roll">Universal Rent Roll</a><a href="account-receivables.html" title="Account Receivables">Account Receivables</a><a href="tenancy-agreement.html" title="Tenancy Agreement">Tenancy Agreement</a><a href="tenant-management.html" title="Tenant Management">Tenant Management</a><a href="property.html" title="Property Management">Property Management</a></div>
+                  </div>
+                </li>
+                <li class="list-inline-item">
+                  <div class="menu-hover">
+                    <div class="menu-toggle inner-menu-toggle">Intelligent Analyzer</div>
+                    <div class="menu-sub-menu"><a href="collection-dashboard.html" title="Collection Dashboard">Collection Dashboard</a><a href="ai-improvement-analysis.html" title="AI Improvement Analysis">AI Improvement Analysis</a><a href="ai-valuation.html" title="AI Valuation">AI Valuation</a><a href="top-outstanding-analysis.html" title="Top Outstanding Analysis">Top Outstanding Analysis</a><a href="7-weeks-forecast.html" title="7 Weeks Forecast">7 Weeks Forecast</a><a href="dso-trending.html" title="DSO Trending">DSO Trending</a></div>
+                  </div>
+                </li>
+                <li class="list-inline-item"><a href="setting.html" title="Setting">Setting</a></li>
+              </ui>
+            </div>
+          </div>
+          <div class="col-6 col-lg-2 text-right d-flex align-items-center justify-content-end order-2 order-lg-3">
+            <div class="lang-row">
+              <button class="lang-btn"><i class="icon-user"></i></button>
+              <div class="lang-menu">
+                <ui class="list-unstyled">
+                  <li><a href="#">Log In</a></li>
+                  <li><a href="#">Sign Up</a></li>
+                </ui>
+              </div>
+            </div>
+            <div class="lang-row">
+              <button class="lang-btn"><i class="icon-earth"></i></button>
+              <div class="lang-menu">
+                <ui class="list-unstyled">
+                  <li><a href="#">繁體中文</a></li>
+                  <li><a href="#">English </a></li>
+                </ui>
+              </div>
+            </div>
+            <div class="hamburger"><span class="line"></span><span class="line"></span><span class="line"></span></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="wrapper" id="page">
+      <div class="loading">
+        <div class="d-flex flex-column align-items-center justify-content-center height_100">
+          <div class="spinner-border text-primary" role="status"></div>
+          <div class="loading-text">Robot is working on it..</div>
+        </div>
+      </div>
+      <div class="inner-wrapper p-5">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-10 col-md-4">
+            <div class="form-group row mb-0">
+              <label class="col-sm-5 col-form-label" for="Account Receivables">Account Receivables</label>
+              <div class="col-sm-7">
+                <select class="form-control" id="Account Receivables">
+                  <option>Default</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="col-1 text-right">
+            <button class="btn-icon" id="info-btn"><i class="icon-information-button"></i></button>
+          </div>
+        </div>
+        <div class="main-table into-system-table mt-4">
+          <table>
+            <thead>
+              <tr>
+                <th width="9.8%">Rent Unit</th>
+                <th width="9.8%">Period from</th>
+                <th width="9.8%">Period to</th>
+                <th width="9.8%">Tenant Name</th>
+                <th width="9.8%">Rent Roll Entry</th>
+                <th width="9.8%">Payee Acct</th>
+                <th width="9.8%">Virtual Acct</th>
+                <th width="9.8%">Reference</th>
+                <th> 
+                  <button class="btn-icon table-sort-btn"><span>Overdue</span><i class="icon-down-open-mini"></i></button>
+                </th>
+                <th> 
+                  <button class="btn-icon table-sort-btn"><span>Amount</span><i class="icon-down-open-mini"></i></button>
+                </th>
+                <th>active</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="text-center">
+                  <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                  <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                </td>
+              </tr>
+                            <tr>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center">
+                                <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                                <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center">
+                                <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                                <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center">
+                                <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                                <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center">
+                                <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                                <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center">
+                                <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                                <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center">
+                                <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                                <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center">
+                                <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                                <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center">
+                                <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                                <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center">
+                                <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                                <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center">
+                                <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                                <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center">
+                                <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                                <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center">
+                                <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                                <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center">
+                                <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                                <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center">
+                                <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                                <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center">
+                                <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                                <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center">
+                                <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                                <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center">
+                                <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                                <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center">
+                                <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                                <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center">
+                                <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                                <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center">
+                                <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                                <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center">
+                                <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                                <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center">
+                                <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                                <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td> </td>
+                              <td><a class="btn-icon d-flex align-items-center justify-content-center" href="rent-roll.html"><span>Link to rent roll</span><i class="icon-click"></i></a></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center">
+                                <button class="btn-icon" data-toggle="modal" data-target="#editModel"><i class="icon-pen"></i></button>
+                                <button class="btn-icon" data-toggle="modal" data-target="#deleteModel"><i class="icon-trash"></i></button>
+                              </td>
+                            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="total-block">
+          <ul class="list-unstyled">
+            <li>
+              <div class="total-block_label">Total Account Receivables</div>
+              <div class="total-block_val">$ XXX,XXX,XXX</div>
+            </li>
+            <li>
+              <div class="total-block_label">Total Overdue Account Receivables</div>
+              <div class="total-block_val">$ XXX,XXX,XXX</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-right" id="info-inner">
+        <button class="btn-icon mb-4" id="info-close-btn"><i class="icon-close"></i></button>
+        <div class="inner text-left">
+          <div class="media mb-4">
+            <div class="icon"><i class="icon-doc-text"></i></div>
+            <div class="media-body">
+              <h6 class="mt-0">1 – 15 Days Aging(#|$)</h6>
+              <div class="val">XXX | YYY</div>
+            </div>
+          </div>
+          <div class="media mb-4">
+            <div class="icon"><i class="icon-doc-text"></i></div>
+            <div class="media-body">
+              <h6 class="mt-0">16 – 30 Days Aging(#|$)</h6>
+              <div class="val">XXX | YYY</div>
+            </div>
+          </div>
+          <div class="media mb-4">
+            <div class="icon"><i class="icon-doc-text"></i></div>
+            <div class="media-body">
+              <h6 class="mt-0">31 – 45 Days Aging(#|$)</h6>
+              <div class="val">XXX | YYY</div>
+            </div>
+          </div>
+          <div class="media mb-4">
+            <div class="icon"><i class="icon-doc-text"></i></div>
+            <div class="media-body">
+              <h6 class="mt-0">45 – 60 Days Aging(#|$)</h6>
+              <div class="val">XXX | YYY</div>
+            </div>
+          </div>
+          <div class="media mb-4">
+            <div class="icon"><i class="icon-doc-text"></i></div>
+            <div class="media-body">
+              <h6 class="mt-0">60+ Days Aging(#|$)</h6>
+              <div class="val">XXX | YYY</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="modal fade" id="deleteModel" tabindex="-1" role="dialog" aria-labelledby="deleteModelCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p class="h6 text-center my-4">Are you sure delete this data?</p>
+          </div>
+          <div class="modal-footer border-none pt-0">
+            <div class="row width_100 no-gutters">
+              <div class="col-6 pr-2">
+                <button class="btn btn-primary width_100" type="button" onclick="">Confirm</button>
+              </div>
+              <div class="col-6 pl-2">
+                <button class="btn btn-secondary width_100" type="button" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="editModel" tabindex="-1" role="dialog" aria-labelledby="editModelCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <form>
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="rent-unit">Rent Unit</label>
+                    <select class="form-control" id="rent-unit">
+                      <option>TWD</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="period-from">Period from</label>
+                    <input class="form-control" id="period-from" type="text">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="period-to">Period to</label>
+                    <input class="form-control" id="period-to" type="text">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="tenant-name">Tenant Name</label>
+                    <input class="form-control" id="tenant-name" type="text">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="payee-acct">Payee Acct</label>
+                    <input class="form-control" id="payee-acct" type="text">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="virtual-acct">Virtual Acct</label>
+                    <input class="form-control" id="virtual-acct" type="text">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="reference">Reference</label>
+                    <input class="form-control" id="reference" type="text">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="overdue">Overdue</label>
+                    <input class="form-control" id="overdue" type="text">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input class="form-control" id="Amount" type="text" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer border-none pt-0">
+            <div class="row width_100 no-gutters">
+              <div class="col-6 pr-2">
+                <button class="btn btn-primary width_100" type="button" onclick="">Confirm</button>
+              </div>
+              <div class="col-6 pl-2">
+                <button class="btn btn-secondary width_100" type="button" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/default/jquery.min.js"></script>
+    <script src="scripts/default/bootstrap.min.js"></script>
+    <script src="scripts/plugins/slick.js"></script>
+    <script src="scripts/default/common.js"></script>
+  </body>
+</html>

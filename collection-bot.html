@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8">
+    <title> </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="styles/images/web-icon.ico">
+    <link rel="stylesheet" type="text/css" href="styles/fonts/css/fontello.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700|Noto+Sans+TC:300,400,500,700,900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/plugins/bootstrap-reboot.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/plugins/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/common.css">
+    <link rel="stylesheet" type="text/css" href="styles/page.css">
+  </head>
+  <body>
+    <header id="header">
+      <div class="container-fluid px-lg-5">
+        <div class="row">
+          <div class="col-6 col-lg-2 text-left d-lg-flex align-items-center order-1 order-lg-1"><a class="logo" href="index.html">
+              <h1 class="logo-pic"><img src="images/logo.svg" alt=""></h1></a></div>
+          <div class="col-12 col-lg-8 d-flex justify-content-lg-center align-items-center order-3 order-lg-2">
+            <div class="menu">
+              <ui class="list-inline">
+                <li class="list-inline-item">
+                  <div class="menu-hover">
+                    <div class="menu-toggle inner-menu-toggle">CM2 Bots</div>
+                    <div class="menu-sub-menu"><a href="agreement-bot.html" title="Agreement Bot">Agreement Bot</a><a href="rent-roll-bot.html" title="Rent Roll Bot">Rent Roll Bot</a><a href="bank-bot.html" title="Bank Bot">Bank Bot</a><a href="collection-bot.html" title="Collection Bot">Collection Bot</a><a href="admin-bot.html" title="Admin Bot">Admin Bot</a></div>
+                  </div>
+                </li>
+                <li class="list-inline-item">
+                  <div class="menu-hover">
+                    <div class="menu-toggle inner-menu-toggle">Income Management</div>
+                    <div class="menu-sub-menu"><a href="rent-roll.html" title="Universal Rent Roll">Universal Rent Roll</a><a href="account-receivables.html" title="Account Receivables">Account Receivables</a><a href="tenancy-agreement.html" title="Tenancy Agreement">Tenancy Agreement</a><a href="tenant-management.html" title="Tenant Management">Tenant Management</a><a href="property.html" title="Property Management">Property Management</a></div>
+                  </div>
+                </li>
+                <li class="list-inline-item">
+                  <div class="menu-hover">
+                    <div class="menu-toggle inner-menu-toggle">Intelligent Analyzer</div>
+                    <div class="menu-sub-menu"><a href="collection-dashboard.html" title="Collection Dashboard">Collection Dashboard</a><a href="ai-improvement-analysis.html" title="AI Improvement Analysis">AI Improvement Analysis</a><a href="ai-valuation.html" title="AI Valuation">AI Valuation</a><a href="top-outstanding-analysis.html" title="Top Outstanding Analysis">Top Outstanding Analysis</a><a href="7-weeks-forecast.html" title="7 Weeks Forecast">7 Weeks Forecast</a><a href="dso-trending.html" title="DSO Trending">DSO Trending</a></div>
+                  </div>
+                </li>
+                <li class="list-inline-item"><a href="setting.html" title="Setting">Setting</a></li>
+              </ui>
+            </div>
+          </div>
+          <div class="col-6 col-lg-2 text-right d-flex align-items-center justify-content-end order-2 order-lg-3">
+            <div class="lang-row">
+              <button class="lang-btn"><i class="icon-user"></i></button>
+              <div class="lang-menu">
+                <ui class="list-unstyled">
+                  <li><a href="#">Log In</a></li>
+                  <li><a href="#">Sign Up</a></li>
+                </ui>
+              </div>
+            </div>
+            <div class="lang-row">
+              <button class="lang-btn"><i class="icon-earth"></i></button>
+              <div class="lang-menu">
+                <ui class="list-unstyled">
+                  <li><a href="#">繁體中文</a></li>
+                  <li><a href="#">English </a></li>
+                </ui>
+              </div>
+            </div>
+            <div class="hamburger"><span class="line"></span><span class="line"></span><span class="line"></span></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="bot-page wrapper" id="page">
+      <div class="row no-gutters">
+        <div class="col-md-3">
+          <div class="formatNav-block">
+            <div class="format-block">
+              <div class="format-btn format-add"><i class="icon-plus"></i></div>
+            </div>
+            <ul class="nav flex-column nav-pills" aria-orientation="vertical">
+              <li class="nav-item"><a class="nav-link" href="agreement-bot.html" title="Agreement Bot">Agreement Bot</a></li>
+              <li class="nav-item"><a class="nav-link" href="rent-roll-bot.html" title="Rent Roll Bot">Rent Roll Bot</a></li>
+              <li class="nav-item"><a class="nav-link" href="bank-bot.html" title="Bank Bot">Bank Bot</a></li>
+              <li class="nav-item"><a class="nav-link active" href="collection-bot.html" title="Collection Bot">Collection Bot</a></li>
+              <li class="nav-item"><a class="nav-link" href="admin-bot.html" title="Admin Bot">Admin Bot</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="loading">
+            <div class="d-flex flex-column align-items-center justify-content-center height_100">
+              <div class="spinner-border text-primary" role="status"></div>
+              <div class="loading-text">Robot is working on it..</div>
+            </div>
+          </div>
+          <div class="inner-wrapper p-5">
+            <h4>CM2 Bank Bot analyse and propose the below contracts:</h4>
+            <div class="main-table mt-4">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Address</th>
+                    <th>Floor</th>
+                    <th>Rent Unit</th>
+                    <th>Size</th>
+                    <th>Layout</th>
+                    <th>Security Deposit</th>
+                    <th>Monthly Rent</th>
+                    <th>Tax Included?</th>
+                    <th>Lease Start Date</th>
+                    <th>Lease End Date</th>
+                    <th>Payment period</th>
+                    <th>No. of Car park</th>
+                    <th>Car park rent</th>
+                    <th>Tenant Name</th>
+                    <th>Management Fee</th>
+                  </tr>
+                </thead>
+                <tbody>
+                                    <tr>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td> </td>
+                                      <td></td>
+                                    </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="text-right"><a class="btn btn-primary btn-lg d-table ml-auto mt-3" href="into-system.html" title="Confirm" style="min-width: 200px;">Confirm</a></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="modal fade" id="uploadFileModel" tabindex="-1" role="dialog" aria-labelledby="uploadFileModelCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label class="d-block h5 text-center mt-2 mb-4" for="uploadFile">Example file input</label>
+                <input class="form-control-file" id="uploadFile" type="file"/>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer border-none pt-0">
+            <div class="row width_100 no-gutters">
+              <div class="col-6 pr-2">
+                <button class="btn btn-primary width_100" type="button" onclick="loading()">Extract</button>
+              </div>
+              <div class="col-6 pl-2">
+                <button class="btn btn-secondary width_100" type="button" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="deleteModel" tabindex="-1" role="dialog" aria-labelledby="deleteModelCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p class="h6 text-center my-4">Are you sure delete this data?</p>
+          </div>
+          <div class="modal-footer border-none pt-0">
+            <div class="row width_100 no-gutters">
+              <div class="col-6 pr-2">
+                <button class="btn btn-primary width_100" type="button" onclick="">Confirm</button>
+              </div>
+              <div class="col-6 pl-2">
+                <button class="btn btn-secondary width_100" type="button" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="editModel" tabindex="-1" role="dialog" aria-labelledby="editModelCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <form>
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="address">Address</label>
+                    <input class="form-control" id="address" type="text">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="floor">Floor</label>
+                    <select class="form-control" id="floor">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="rent-unit">Rent Unit</label>
+                    <select class="form-control" id="rent-unit">
+                      <option>TWD</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="size">Size</label>
+                    <input class="form-control" id="size" type="text">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="layout">Layout</label>
+                    <input class="form-control" id="layout" type="text">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="security-deposit">Security Deposit</label>
+                    <input class="form-control" id="security-deposit" type="text">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="monthly-rent">Monthly Rent</label>
+                    <input class="form-control" id="monthly-rent" type="text">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="tax-included">Tax Included</label>
+                    <select class="form-control" id="tax-included">
+                      <option>Tax Included</option>
+                      <option>Untaxed</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="lease-start-date">Lease Start Date</label>
+                    <input class="form-control" id="lease-start-date" type="date">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="lease-end-date">Lease End Date</label>
+                    <input class="form-control" id="lease-end-date" type="date">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="payment-period">Payment period</label>
+                    <input class="form-control" id="payment-period" type="text">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="No-of-car-park">No. of Car park</label>
+                    <input class="form-control" id="No-of-car-park" type="text">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="car-park-rent">Car park rent</label>
+                    <input class="form-control" id="car-park-rent" type="text">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="tenant-name-management">Tenant Name	Management</label>
+                    <input class="form-control" id="tenant-name-management" type="text">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="fee">Fee</label>
+                    <input class="form-control" id="fee" type="text">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer border-none pt-0">
+            <div class="row width_100 no-gutters">
+              <div class="col-6 pr-2">
+                <button class="btn btn-primary width_100" type="button" onclick="">Confirm</button>
+              </div>
+              <div class="col-6 pl-2">
+                <button class="btn btn-secondary width_100" type="button" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/default/jquery.min.js"></script>
+    <script src="scripts/default/bootstrap.min.js"></script>
+    <script src="scripts/default/bot.js"></script>
+    <script src="scripts/default/common.js"></script>
+  </body>
+</html>
