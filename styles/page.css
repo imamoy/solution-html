@@ -319,9 +319,18 @@
     background-color: #fff; }
   .matching-table .matched {
     color: #4370bb; }
-  .matching-table .black {
-    background-color: #888888 !important; }
-    .matching-table .black td {
-      color: rgba(255, 255, 255, 0.5); }
+  .matching-table .black td {
+    background-color: #888888 !important;
+    color: rgba(255, 255, 255, 0.5); }
+    .matching-table .black td.blue {
+      background-color: #888888 !important;
+      border: none; }
   .matching-table td.blue {
-    background-color: rgba(67, 112, 187, 0.2); }
+    background-color: rgba(67, 112, 187, 0.1) !important;
+    border-top: 1px solid rgba(222, 222, 222, 0.8); }
+    .matching-table td.blue:first-child {
+      border: none; }
+  .matching-table th.note {
+    background-color: #ec7b1b; }
+  .matching-table tr:nth-child(even) td.note {
+    background-color: rgba(236, 123, 27, 0.2); }

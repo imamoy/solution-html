@@ -152,12 +152,13 @@ a {
     .main-table table th, .main-table table td {
       height: 45px;
       white-space: nowrap;
-      padding: 0 24px; }
+      font-size: 13px;
+      padding: 0 8px; }
     .main-table table tbody {
       overflow-y: scroll; }
-      .main-table table tbody tr:nth-child(odd) {
+      .main-table table tbody tr:nth-child(odd) td {
         background-color: #fff; }
-      .main-table table tbody tr:nth-child(even) {
+      .main-table table tbody tr:nth-child(even) td {
         background-color: rgba(67, 112, 187, 0.1); }
       .main-table table tbody td {
         border-right: 1px solid rgba(187, 187, 187, 0.3); }
