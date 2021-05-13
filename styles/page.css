@@ -23,7 +23,8 @@
   top: 80px;
   right: -100%;
   -webkit-transition: right .25s;
-  transition: right .25s; }
+  transition: right .25s;
+  z-index: 50; }
   #info-inner.active {
     right: 0; }
   #info-inner .media {
